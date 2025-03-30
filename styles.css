@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 80%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Headings */
+h1 {
+    color: #444;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #555;
+    font-size: 22px;
+    margin-top: 20px;
+    border-bottom: 2px solid #6e8efb;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Dropdowns and Button */
+.dropdowns {
+    margin: 20px 0;
+}
+
+select, button {
+    padding: 12px;
+    margin: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown Styles */
+select {
+    background: #f8f8f8;
+    cursor: pointer;
+}
+
+select:hover {
+    border-color: #6e8efb;
+}
+
+/* Button Styles */
+button {
+    background: #6e8efb;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #5b79d4;
+    transform: scale(1.05);
+}
+
+/* Weather Data Section */
+#weather-data {
+    margin-top: 20px;
+    display: none;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.8s ease-in-out;
+}
+
+/* Weather Details */
+#weather-data p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Canvas for Charts */
+canvas {
+    height: auto !important;
+    width: 40% !important;
+    margin: 15px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    select, button {
+        width: 90%;
+    }
+}

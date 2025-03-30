@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Pollution Data Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather and Pollution Data Visualization</h1>
+        <div class="dropdowns">
+            <select id="country">
+                <option value="">Select Country</option>
+            </select>
+            <select id="state">
+                <option value="">Select State</option>
+            </select>
+            <select id="city">
+                <option value="">Select City</option>
+            </select>
+            <button id="apply-button">Apply</button>
+        </div>
+        <div id="weather-data" style="display: none;">
+            <div style="display: flex;justify-content: space-around;">
+                <div>
+                    <h2>Location Information</h2>
+                    <p id="city-name"></p>
+                    <p id="state-name"></p>
+                    <p id="country-name"></p>
+                    <p id="coordinates"></p>
+                </div>
+                <div>
+                    <h2>Pollution Data</h2>
+                    <p id="aqius"></p>
+                    <p id="mainus"></p>
+                    <p id="aqicn"></p>
+                    <p id="maincn"></p>
+                </div>
+                <div>
+                    <h2>Weather Data</h2>
+                    <p id="ts"></p>
+                    <p id="tp"></p>
+                    <p id="pr"></p>
+                    <p id="hu"></p>
+                    <p id="ws"></p>
+                    <p id="wd"></p>
+                    <p id="ic"></p>
+                </div>
+            </div>
+            <h2>Visualizations</h2>
+            <div style="display: flex;">
+
+                <canvas id="weather-chart"></canvas>
+                <canvas id="pollution-chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
