@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather and Air Pollution Dashboard</title>
+
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Chart.js library for visualizations -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
     <div class="container">
         <h1>Weather and Air Pollution Dashboard</h1>
+
+        <!-- Dropdowns for selecting country, state, and city -->
         <div class="dropdowns">
             <select id="country">
                 <option value="">Select Country</option>
@@ -22,10 +28,14 @@
             <select id="city">
                 <option value="">Select City</option>
             </select>
-            <button id="apply-button">Apply</button>
+            <button id="apply-button">Apply</button> <!-- Button to fetch weather and pollution data -->
         </div>
+
+        <!-- Section to display retrieved weather and pollution data -->
         <div id="weather-data" style="display: none;">
-            <div style="display: flex;justify-content: space-around;">
+            <div style="display: flex; justify-content: space-around;">
+                
+                <!-- Location Information -->
                 <div>
                     <h2>Location Information</h2>
                     <p id="city-name"></p>
@@ -33,32 +43,39 @@
                     <p id="country-name"></p>
                     <p id="coordinates"></p>
                 </div>
+
+                <!-- Pollution Data -->
                 <div>
                     <h2>Pollution Data</h2>
-                    <p id="aqius"></p>
-                    <p id="mainus"></p>
-                    <p id="aqicn"></p>
-                    <p id="maincn"></p>
+                    <p id="aqius"></p> <!-- Air Quality Index (US) -->
+                    <p id="mainus"></p> <!-- Main Pollutant (US) -->
+                    <p id="aqicn"></p> <!-- Air Quality Index (CN) -->
+                    <p id="maincn"></p> <!-- Main Pollutant (CN) -->
                 </div>
+
+                <!-- Weather Data -->
                 <div>
                     <h2>Weather Data</h2>
-                    <p id="ts"></p>
-                    <p id="tp"></p>
-                    <p id="pr"></p>
-                    <p id="hu"></p>
-                    <p id="ws"></p>
-                    <p id="wd"></p>
-                    <p id="ic"></p>
+                    <p id="ts"></p> <!-- Timestamp of data -->
+                    <p id="tp"></p> <!-- Temperature -->
+                    <p id="pr"></p> <!-- Pressure -->
+                    <p id="hu"></p> <!-- Humidity -->
+                    <p id="ws"></p> <!-- Wind Speed -->
+                    <p id="wd"></p> <!-- Wind Direction -->
+                    <p id="ic"></p> <!-- Weather Icon -->
                 </div>
             </div>
+
+            <!-- Visualization Section -->
             <h2>Visualizations</h2>
             <div style="display: flex;">
-
-                <canvas id="weather-chart"></canvas>
-                <canvas id="pollution-chart"></canvas>
+                <canvas id="weather-chart"></canvas> <!-- Bar chart for weather data -->
+                <canvas id="pollution-chart"></canvas> <!-- Doughnut chart for pollution data -->
             </div>
         </div>
     </div>
+
+    <!-- External JavaScript file -->
     <script src="script.js"></script>
 </body>
 

@@ -1,6 +1,8 @@
 Use Free Airquality API: (10 Requests per Second)
-Account & API Key : https://dashboard.iqair.com/personal/api-keys (email)
-API Key : XXX
+Generate API Key : https://dashboard.iqair.com/personal/api-keys
+API Key : XXXXXXXXXXXXXX
+
+Different APIs available:
 
 Countris List :
 http://api.airvisual.com/v2/countries?key={{YOUR_API_KEY}}
